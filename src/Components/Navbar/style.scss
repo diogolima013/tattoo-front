@@ -1,0 +1,36 @@
+a, button{
+    font-family: "Julee", cursive;
+    font-size: 1.5em;
+}
+a:hover{
+    color: rgb(255, 255, 255);
+}
+
+
+button:hover {
+    animation: hover 100s infinite;
+  }
+  
+  a:hover {
+    animation: hover 100s infinite;
+  }
+
+  @keyframes hover {
+    0% {
+      transform: scale(1);
+ 
+    }
+    1% {
+      transform: scale(1.1);
+  
+    }
+    100% {
+      transform: scale(1);
+     
+    }
+  }
+
+  .flex{
+    position: relative;
+    top: 8px;
+  }

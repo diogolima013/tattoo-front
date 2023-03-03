@@ -8,9 +8,9 @@ export default function Navbar() {
 
   // função para rolar até a seção "Sobre Nós"
   const scrollToSobreNos = () => {
-    if (location.pathname !== "/home") {
+    if (location.pathname !== "/") {
       // se o usuário não estiver na página HomePage, redirecione-o para a página HomePage
-      navigate("/home");
+      navigate("/");
       setTimeout(() => {
         const sobreNos = document.getElementById("sobreNos");
         sobreNos.scrollIntoView({ behavior: "smooth" });
@@ -45,9 +45,6 @@ export default function Navbar() {
           >
             Login
           </a>
-       
-
-       
         </div>
       </div>
     </nav>

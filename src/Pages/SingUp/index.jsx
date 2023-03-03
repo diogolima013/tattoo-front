@@ -35,43 +35,44 @@ const SignUp = () => {
       toast.success("registered user!!")
       navigate('/sign_in')
     } catch (error) {
-      toast.error("invalid user!!");
+      console.log(error)
+      navigate('/');
     }
   };
 
   return (
     <div className="container">
-      <div class="min-h-screen bg-stone-900 py-6 flex flex-col justify-center sm:py-12  w-screen h-screen ">
-        <div class="relative py-3 sm:max-w-xl sm:mx-auto h-screen w-screen">
-          <div class="relative px-4 py-10 bg-slate-100 mx-8 md:mx-0 shadow rounded-xl sm:p-10 bg-slate  ">
-            <div class="max-w-md mx-auto">
-              <div class="flex items-center space-x-5 px-4 py-2 border:none focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm rounded-md focus:outline-none ">
-                <div class="text-center block pl-2 font-semibold text-xl self-start text-gray-700">
-                  <h2 class="leading-relaxed font-bold text-black text-4xl text-center ">
+      <div className="min-h-screen bg-stone-900 py-6 flex flex-col justify-center sm:py-12  w-screen h-screen ">
+        <div className="relative py-3 sm:max-w-xl sm:mx-auto h-screen w-screen">
+          <div className="relative px-4 py-10 bg-slate-100 mx-8 md:mx-0 shadow rounded-xl sm:p-10 bg-slate  ">
+            <div className="max-w-md mx-auto">
+              <div className="flex items-center space-x-5 px-4 py-2 border:none focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm rounded-md focus:outline-none ">
+                <div className="text-center block pl-2 font-semibold text-xl self-start text-gray-700">
+                  <h2 className="leading-relaxed font-bold text-black text-4xl text-center ">
                     Sing Up
                   </h2>
                 </div>
               </div>
               <form onSubmit={handleSubmit}>
-                <div class="divide-y divide-gray-200">
-                  <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
-                    <div class="flex items-center space-x-4">
-                      <div class="flex flex-col">
-                        <label class="leading-loose font-bold text-black ">
+                <div className="divide-y divide-gray-200">
+                  <div className="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
+                    <div className="flex items-center space-x-4">
+                      <div className="flex flex-col">
+                        <label className="leading-loose font-bold text-black ">
                           First Name
                         </label>
-                        <div class="relative focus-within:text-gray-600 text-gray-400">
+                        <div className="relative focus-within:text-gray-600 text-gray-400">
                           <input
                             type="text"
-                            class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-900 rounded-md focus:outline-none text-gray-600"
+                            className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-900 rounded-md focus:outline-none text-gray-600"
                             placeholder="Name"
                             value={firstname}
                             onChange={(e) => setFirstname(e.target.value)}
                           />
                         </div>
                       </div>
-                      <div class="flex flex-col">
-                        <label class="leading-loose font-bold text-black">
+                      <div className="flex flex-col">
+                        <label className="leading-loose font-bold text-black">
                           Last Name
                         </label>
                         <div class="relative focus-within:text-gray-600 text-gray-400">
@@ -86,71 +87,71 @@ const SignUp = () => {
                       </div>
                     </div>
 
-                    <div class="flex flex-col">
-                      <label class="leading-loose font-bold text-black">
+                    <div className="flex flex-col">
+                      <label className="leading-loose font-bold text-black">
                         Email
                       </label>
                       <input
                         type="text"
-                        class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-900 rounded-md focus:outline-none text-gray-600"
+                        className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-900 rounded-md focus:outline-none text-gray-600"
                         placeholder="user@user.com"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                       />
                     </div>
 
-                    <div class="flex flex-col">
-                      <label class="leading-loose font-bold text-black">
+                    <div className="flex flex-col">
+                      <label className="leading-loose font-bold text-black">
                         Phone
                       </label>
                       <input
                         type="number"
-                        class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-900 rounded-md focus:outline-none text-gray-600"
+                        className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-900 rounded-md focus:outline-none text-gray-600"
                         placeholder="(00)9999-9999"
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                       />
                     </div>
-                    <div class="flex flex-col">
-                      <label class="leading-loose font-bold text-black">
+                    <div className="flex flex-col">
+                      <label className="leading-loose font-bold text-black">
                         Birthdate
                       </label>
                       <input
                         type="date"
-                        class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-900 rounded-md focus:outline-none text-gray-600"
+                        className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-900 rounded-md focus:outline-none text-gray-600"
                         value={birthdate}
                         onChange={(e) => setBirthdate(e.target.value)}
                       />
                     </div>
-                    <div class="flex flex-col">
-                      <label class="leading-loose font-bold text-black ">
+                    <div className="flex flex-col">
+                      <label className="leading-loose font-bold text-black ">
                         Password
                       </label>
                       <input
                         type="password"
-                        class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-900 rounded-md focus:outline-none text-gray-600"
+                        className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-900 rounded-md focus:outline-none text-gray-600"
                         placeholder="********"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                       />
                     </div>
                   </div>
-                  <div class="flex flex-col">
-                    <label class="leading-loose font-bold text-black ">
+                  <div className="flex flex-col">
+                    <label className="leading-loose font-bold text-black ">
                       Confirm Password
                     </label>
                     <input
                       type="password"
-                      class="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-900 rounded-md focus:outline-none text-gray-600"
+                      className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-900 rounded-md focus:outline-none text-gray-600"
                       placeholder="********"
                       value={confirmPassword}
                       onChange={(e) => setConfirmPassword(e.target.value)}
                     />
                   </div>
-                  <div class="pt-4 flex items-center space-x-4">
-                    <button class="flex justify-center items-center w-full text-gray-900 px-4 py-3 rounded-md focus:outline-none">
+                  <div className="pt-4 flex items-center space-x-4"  href="/signin">
+                    <button className="flex justify-center items-center w-full text-gray-900 px-4 py-3 rounded-md focus:outline-none">
                       <svg
-                        class="w-6 h-6 mr-3"
+                        className="w-6 h-6 mr-3"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -165,7 +166,7 @@ const SignUp = () => {
                       </svg>{" "}
                       Cancel
                     </button>
-                    <button class="bg-blue-500 flex justify-center items-center w-full text-white px-4 py-3 rounded-md focus:outline-none">
+                    <button className="bg-blue-500 flex justify-center items-center w-full text-white px-4 py-3 rounded-md focus:outline-none">
                       Create
                     </button>
                   </div>
